@@ -1,0 +1,616 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Justice Security</title>
+  <link
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    rel="stylesheet"
+  />
+  <style>
+    *{
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
+    .right{
+      background-color: #1d3f86;
+      align-items: right;
+    }
+    .top-bar {
+      background-color: #1d3f86;
+      color: white;
+      padding: 10px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .top-bar .left,
+    .top-bar .right {
+      background-color: #1d3f86;
+      display: flex;
+      align-items: right;
+    }
+    .top-bar select,
+    .top-bar input {
+      margin-left: 10px;
+      padding: 5px;
+      border-radius: 4px;
+      border: none;
+    }
+    .top-bar button {
+      background-color: #2d5da5;
+      color: white;
+      border: none;
+      padding: 8px 12px;
+      margin-left: 10px;
+      cursor: pointer;
+    }
+    .social{
+      background-color: #1f3d75;
+      color: white;
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      gap: 20px;
+      padding: 10px 30px;
+      font-family: Arial, sans-serif;
+    }
+
+    .survey-button {
+      border: 2px solid white;
+      background: transparent;
+      color: white;
+      padding: 8px 16px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: background 0.3s;
+    }
+
+    .survey-button:hover {
+      background-color: white;
+      color: #1f3d75;
+    }
+
+    .phone {
+      display: flex;
+      align-items: center;
+      font-size: 16px;
+    }
+
+    .phone i {
+      margin-right: 8px;
+      font-size: 16px;
+    }
+    .nav-bar {
+      background-color: #23488f;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 20px;
+      color: white;
+    }
+    .menu {
+      display: flex;
+      gap: 20px;
+      font-size: 14px;
+    }
+    .menu a {
+      text-decoration: none;
+      color: white;
+      font-weight: bold;  
+    }
+    .hero {
+      background: url("T10.webp") center center/cover no-repeat;
+      background-color: #1d3f86;
+      height: 400px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: white;
+      font-size: 36px;
+      font-weight: bold;
+      text-shadow: 1px 1px 4px black;
+    }
+     .services-section {
+      
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 40px;
+      background-color: #fff;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 40px;
+      max-width: 1200px;
+      margin: auto;
+    }
+    .services-content {
+      flex: 1;
+    }
+    .services-content h2 {
+      font-size: 28px;
+      font-weight: bold;
+      border-bottom: 3px solid #2d5da5;
+      display: inline-block;
+      padding-bottom: 5px;
+      margin-bottom: 20px;
+    }
+    .moni h2{
+      font-size: 28px;
+      font-weight: bold;
+      border-bottom: 3px solid #2d5da5;
+      display: inline-block;
+      padding-bottom: 5px;
+      margin-bottom: 20px;
+    }
+    .case-studies h2{
+      font-size: 28px;
+      font-weight: bold;
+      border-bottom: 3px solid #2d5da5;
+      display: inline-block;
+      padding-bottom: 5px;
+      margin-bottom: 20px;
+    }
+  
+    .services-content p {
+      font-size: 16px;
+      line-height: 1.6;
+      color: #333;
+    }
+    .services-content p strong {
+      font-weight: bold;
+    }
+    .services-content .read-more {
+      margin-top: 20px;
+      display: inline-block;
+      background-color: #2d5da5;
+      color: white;
+      padding: 10px 20px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    .services-buttons {
+      flex: 0 0 300px;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+    .services-buttons a {
+      background-color: #0052b4;
+      color: white;
+      text-align: center;
+      padding: 15px;
+      text-decoration: none;
+      font-weight: bold;
+      box-shadow: 4px 4px 0px #9990f5;
+      border-radius: 6px;
+      transition: background-color 0.3s;
+    }
+    .services-buttons a:hover {
+      background-color: #003d88;
+    }
+    .case-studies .cases {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      flex-wrap: wrap;
+      margin-top: 20px;
+    }
+    .case-studies img {
+      width: 250px;
+      height: 150px;
+      padding: 5px;
+      object-fit: cover;
+    } 
+    .read-more1 {
+      width: 250px;
+      height: 140px;
+      margin-top: 5px;
+      align-content: center;
+      object-fit: cover;
+      display: inline-block;
+      background: #0d3d80;
+      color: white;
+      padding: 5px;
+      cursor: pointer;
+   }
+
+    .read-more {
+      width: 350px;
+      height: auto;
+      margin-top: 20px;
+      display: inline-block;
+      background: #0d3d80;
+      color: white;
+      padding: 10px 20px;
+      cursor: pointer;
+   }
+   .services-content{
+      padding: 40px 30px;
+      text-align: left;
+   }
+    .what-we-do, .case-studies, .testimonial {
+      padding: 40px 30px;
+      text-align: center;
+   }
+    .services h2.what-we-do h2, .case-studies h2, .testimonial h2 {
+      margin-bottom: 20px;
+      font-size: 24px;
+   }
+   
+   .service-section {
+      background-color: #2d5da5;
+      color: white;
+      text-align: center;
+      padding: 60px 20px;
+    }
+
+    .service-section h2 {
+      font-size: 36px;
+      margin-bottom: 40px;
+      font-weight: bold;
+    }
+    .icon-row {
+      display: flex;
+      justify-content: center;
+      gap: 80px;
+      margin-bottom: 40px;
+      flex-wrap: wrap;
+    }
+
+    .service-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      min-width: 120px;
+    }
+
+    .service-item i {
+      font-size: 28px;
+      background-color: white;
+      color: #2d5da5;
+      border-radius: 50%;
+      padding: 15px;
+      margin-bottom: 12px;
+    }
+
+    .service-item span {
+      font-size: 16px;
+      font-weight: bold;
+    }
+
+    @media (max-width: 768px) {
+      .icon-row {
+        gap: 40px;
+      }
+    }
+    .testimonial-container h2{
+              font-family: Arial, sans-serif;
+      background-color: #fff;
+      margin: 0;
+      padding: 40px 20px;
+      text-align: center;
+      font-size: 32px;
+      font-weight: bold;
+      margin-bottom: 40px;
+      border-bottom: 3px solid #2d5da5;
+      display: inline-block;
+      padding-bottom: 5p
+    }
+    .testimonial-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 30px;
+      margin-bottom: 40px;
+    }
+
+    .testimonial-card {
+      background: #fff;
+      border: 1px solid #eee;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.06);
+      padding: 30px 20px;
+      width: 300px;
+      max-width: 100%;
+      text-align: center;
+    }
+
+    .testimonial-card img {
+      max-height: 50px;
+      margin-bottom: 15px;
+    }
+
+    .testimonial-card h3 {
+      font-size: 18px;
+      margin: 10px 0 5px;
+      font-weight: bold;
+    }
+
+    .testimonial-card .subtitle {
+      font-size: 13px;
+      color: #2d5da5;
+      font-weight: bold;
+      margin-bottom: 15px;
+    }
+
+    .testimonial-card p {
+      font-size: 14px;
+      color: #333;
+      line-height: 1.5;
+    }
+.testimonial-card a {
+      color: #2d5da5;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .read-more2 {
+      display: inline-block;
+      background-color: #2d5da5;
+      color: #fff;
+      align-content: center;
+      padding: 10px 25px;
+      font-weight: bold;
+      text-decoration: none;
+    }
+    .right1{
+      align-content:right;
+    }
+    @media (max-width: 768px) {
+      .testimonial-container {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+.top-logos {
+      background-color: white;
+      padding: 20px;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    .top-logos img {
+      height: 60px;
+      margin: 10px 20px;
+    }
+    .footer {
+       margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #2e4f93;
+      color: white;
+      display: flex;
+      flex-wrap: wrap;
+      padding: 40px;
+      justify-content: space-between;
+    }
+    .footer-column {
+      flex: 1 1 300px;
+      margin: 20px;
+    }
+    .footer h3 {
+      font-size: 18px;
+      font-weight: bold;
+      margin-bottom: 15px;
+    }
+    .footer a {
+      display: block;
+      color: white;
+      text-decoration: none;
+      margin: 8px 0;
+    }
+    .footer a:hover {
+      text-decoration: underline;
+    }
+    .social-icons {
+      margin: 20px 0;
+    }
+    .social-icons i {
+      font-size: 20px;
+      margin-right: 15px;
+    }
+    .footer-note {
+      font-size: 14px;
+      margin-top: 20px;
+      line-height: 1.5;
+    }
+    .message-form {
+      display: flex;
+      flex-direction: column;
+    }
+    .message-form input,
+    .message-form textarea {
+      padding: 10px;
+      margin-bottom: 15px;
+      border: 1px solid #ccc;
+      border-radius: 3px;
+      font-size: 14px;
+    }
+    .message-form input[type="submit"] {
+      background-color: transparent;
+      color: white;
+      border: 1px solid white;
+      cursor: pointer;
+      font-size: 16px;
+      padding: 10px;
+    }
+    .message-form input[type="submit"]:hover {
+      background-color: white;
+      color: #2e4f93;
+    }
+</style>
+</style>
+</head>
+<body>
+   <div class="social">
+      <i class="fab fa-twitter"></i>
+      <i class="fab fa-linkedin"></i>
+      <i class="fab fa-youtube"></i>
+      <i class="fab fa-facebook"></i>
+    <a href="#form" class="survey-button">Pay Order</a>
+    <div class="phone">
+      <i class="fas fa-phone-alt"></i>
+      <span>6374424590</span>
+    </div>
+    </div>
+  <div class="nav-bar">
+    <div class="logo-container">
+    <img src="scales-of-justice.png" alt="Logo">
+  </div>
+    <div class="menu">
+      <a href="#home">HOME</a>
+      <a href="#about">ABOUT</a>
+      <a href="#t0">OUR SERVICES</a>
+      <a href="#t1">WHAT WE DO</a>
+      <a href="#t1">CASE STUDIES</a> 
+      <a href="#t5">TESTIMONIALS</a>
+      <a href="#t2"> NEWS</a>
+      <a href="#t4"> CARRERS</a>
+      <a href="#contact">CONTACT US</a>
+    </div>
+  </div>
+
+  <div class="hero" id="home">
+    ESTABLISHED FOR OVER 30 YEARS
+  </div>
+    <div class="services-section">
+    <div class="services-content">
+     <center> <h2 id="t0">OUR SERVICES</h2></center>
+      <p>To truly protect your home or business, you need the best security systems available. Since we started in 1986, Justice Fire and Security has built a strong reputation for keeping people safe.</p>
+      <p>This quality is reflected in our Gold accreditation from the National Security Inspectorate. We only use the best CCTV cameras, burglar alarms, fire alarms, home security systems, retail security solutions and monitoring services.</p>
+      <p><strong>It’s important to find security experts you can trust.</strong></p>
+      <a href="#" class="read-more">READ MORE</a>
+    </div>
+    <div class="services-buttons">
+      <a href="#form">Enquiry Form</a>
+      <a href="#form">Book Your FREE Site Survey</a>
+      <a href="#form">FREE Purchasers Guide</a>
+      <a href="#contact">Contact Us</a>
+    </div>
+  </div>
+    <div class="service-section">
+    <h2 id="t1">WHAT WE DO</h2>
+
+    <div class="icon-row">
+      <div class="service-item">
+        <i class="fas fa-video"></i>
+        <span>CCTV</span>
+      </div>
+      <div class="service-item">
+        <i class="fas fa-th"></i>
+        <span>Access Control</span>
+      </div>
+      <div class="service-item">
+        <i class="fas fa-map-marker-alt"></i>
+        <span>Intruder Alarms</span>
+      </div>
+    </div>
+
+    <div class="icon-row">
+      <div class="service-item">
+        <i class="fas fa-tools"></i>
+        <span>Maintenance</span>
+      </div>
+      <div class="service-item">
+        <i class="fas fa-fire"></i>
+        <span>Fire Detection</span>
+      </div>
+      <div class="service-item">
+        <i class="fas fa-eye"></i>
+        <span>Monitoring</span>
+      </div>
+    </div>
+  </div>
+    <section class="case-studies">
+    <u><h2 id=t5>CASE STUDIES</h2></u>
+    <div class="cases">
+      <img src="T11.jpg" alt="Case Study 1">
+      <img src="T12.jpeg" alt="Case Study 2">
+      <img src="T14.jpg" alt="Case Study 3">
+       <section class="read-more1">READ MORE
+    </div>
+  </section>  
+  <div class="moni">
+ <center> <u><h2 id="t2">TESTIMONIALS</h2></u></center><br>
+  <div class="testimonial-container">
+      <div class="testimonial-card">
+      <img src="johnson_fellows_llp_logo.jpeg" alt="Johnson Fellows Logo">
+      <h3>Johnson Fellows</h3>
+      <div class="subtitle">CHRIS MONTEITH (FACILITIES MANAGER)<br>JOHNSON FELLOWS CHARTERED SURVEYORS</div>
+      <p>"Justice Fire and Security have worked closely with Johnson Fellows for many years, their knowledge, value and advice set them apart from other suppliers."</p>
+      </div>
+    <div class="testimonial-card">
+      <img src="google.webp" alt="Google Logo">
+      <h3>Google Reviews</h3>
+      <div class="subtitle"><a href="#">READ OUR REVIEWS FROM GOOGLE</a></div>
+      <p>Read what our customers are saying about us on <a href="#">Google</a>.</p>
+      <p>We are very proud of the service we provide and some of our customers have been with us for over 30 Years!</p>
+      <p>Click <a href="#">here</a> to find out more of what customers think.</p>
+    </div>
+
+    <div class="testimonial-card">
+      <img src="net logo.png" alt="Net Lynk Logo">
+      <h3>Net Lynk</h3>
+      <div class="subtitle">MARK FLETCHER DIRECTOR (NET LYNK DIRECT)</div>
+      <p>"Having used your Company for over 13 years in both Business and Private capacities it was once again a pleasure for the latest system to be installed on time. Your engineers worked diligently and professionally and even took the time to stay on at the end of the day to give the staff a full demonstration."</p>
+    </div>
+  </div>
+  <center><a href="#" class="read-more2">READ MORE</a></center>
+  <div class="top-logos" id="t4">
+  <img src="bafe-f.png" alt="BAFE Logo" />
+  <img src="BSIA_Logo-400x174.png" alt="BSIA Logo" />
+  <img src="fire.png" alt="FIA Logo" />
+  <img src="gold.jpeg" alt="GOLD Logo" />
+</div>
+
+<div class="footer">
+  <div class="footer-column" id="about">
+    <h3>ABOUT</h3>
+    <a href="#">About Us</a>
+    <a href="#">News</a>
+    <a href="#t2">Testimonials</a>
+    <div class="social-icons">
+      <i class="fab fa-twitter"></i>
+      <i class="fab fa-linkedin"></i>
+      <i class="fab fa-youtube"></i>
+      <i class="fab fa-facebook"></i>
+    </div>
+    <div class="footer-note">
+      Registered Office and Accounts Unit A3 OYO Business Park, 187 Park Lane, Castle Vale,<br>
+      Birmingham B35 6AN Registered in England No: 02053612 VAT Reg No: 486 629 788
+      <br><br>
+      Telephone calls to our Offices may be recorded for training & Security purposes
+    </div>
+  </div>
+
+  <div class="footer-column" id="contact">
+    <h3>CONTACT US</h3>
+    <a href="#">6374424590</a>
+    <a href="#">akshathamoni3@gmail.com</a>
+    <a href="#">Privacy & Cookie Policy</a>
+    <a href="#">Policy Statements</a>
+  </div>
+
+  <div class="footer-column" id="form">
+    <h3>SEND US A MESSAGE</h3>
+    <form class="message-form">
+      <input type="text" placeholder="Full Name" required>
+      <input type="email" placeholder="Email Address" required>
+      <textarea rows="4" placeholder="Message" required></textarea>
+      <div style="display: flex; align-items: center; gap: 10px; border: 1px solid #ccc; padding: 20px; background-color: white; width: 380px; color: black;">
+  <input type="checkbox" id="human-check" style="width: 25px; height: 20px;">
+  <label for="human-check" style="font-size: 16px;" >I am not Robot</label>
+</div><br>
+<input type="submit" value="Submit">
+</form>
+</div>
+</div>
+</body>
+</html>
