@@ -131,7 +131,13 @@
       margin: auto;
     }
     .services-content {
-      flex: 1;
+      padding: 40px 30px;
+      text-align: left;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: flex-start;
+      gap: 20px;
     }
     .services-content h2 {
       font-size: 28px;
@@ -208,6 +214,10 @@
       padding: 5px;
       object-fit: cover;
     } 
+    .case-studies img:hover{
+       transform: scale(1.05);
+       background-color: #003d88;
+    }
     .read-more1 {
       width: 250px;
       height: 140px;
@@ -291,7 +301,7 @@
       }
     }
     .testimonial-container h2{
-              font-family: Arial, sans-serif;
+      font-family: Arial, sans-serif;
       background-color: #fff;
       margin: 0;
       padding: 40px 20px;
@@ -309,8 +319,10 @@
       justify-content: center;
       gap: 30px;
       margin-bottom: 40px;
+    } 
+    .testimonial-card:hover{
+      transform: scale(1.05);
     }
-
     .testimonial-card {
       background: #fff;
       border: 1px solid #eee;
@@ -320,7 +332,7 @@
       max-width: 100%;
       text-align: center;
     }
-
+    
     .testimonial-card img {
       max-height: 50px;
       margin-bottom: 15px;
@@ -343,8 +355,9 @@
       font-size: 14px;
       color: #333;
       line-height: 1.5;
+      gap: 15px;
     }
-.testimonial-card a {
+    .testimonial-card a {
       color: #2d5da5;
       text-decoration: none;
       font-weight: bold;
@@ -368,7 +381,7 @@
         align-items: center;
       }
     }
-.top-logos {
+    .top-logos {
       background-color: white;
       padding: 20px;
       display: flex;
@@ -380,6 +393,9 @@
     .top-logos img {
       height: 60px;
       margin: 10px 20px;
+    }
+    .top-logos img:hover{
+        transform: scale(1.05);
     }
     .footer {
        margin: 0;
@@ -482,7 +498,7 @@
   </div>
     <div class="services-section">
     <div class="services-content">
-     <center> <h2 id="t0">OUR SERVICES</h2></center>
+      <h2 id="t0">OUR SERVICES</h2>
       <p>To truly protect your home or business, you need the best security systems available. Since we started in 1986, Justice Fire and Security has built a strong reputation for keeping people safe.</p>
       <p>This quality is reflected in our Gold accreditation from the National Security Inspectorate. We only use the best CCTV cameras, burglar alarms, fire alarms, home security systems, retail security solutions and monitoring services.</p>
       <p><strong>It’s important to find security experts you can trust.</strong></p>
@@ -538,20 +554,20 @@
     </div>
   </section>  
   <div class="moni">
- <center> <u><h2 id="t2">TESTIMONIALS</h2></u></center><br>
+ <center><u><h2 id="t2">TESTIMONIALS</h2></u></center><br>
   <div class="testimonial-container">
       <div class="testimonial-card">
       <img src="johnson_fellows_llp_logo.jpeg" alt="Johnson Fellows Logo">
       <h3>Johnson Fellows</h3>
-      <div class="subtitle">CHRIS MONTEITH (FACILITIES MANAGER)<br>JOHNSON FELLOWS CHARTERED SURVEYORS</div>
+      <div class="subtitle">CHRIS MONTEITH (FACILITIES MANAGER)JOHNSON FELLOWS CHARTERED SURVEYORS</div>
       <p>"Justice Fire and Security have worked closely with Johnson Fellows for many years, their knowledge, value and advice set them apart from other suppliers."</p>
       </div>
     <div class="testimonial-card">
-      <img src="google.webp" alt="Google Logo">
+      <img src="review us.jpg" alt="Google Logo">
       <h3>Google Reviews</h3>
       <div class="subtitle"><a href="#">READ OUR REVIEWS FROM GOOGLE</a></div>
-      <p>Read what our customers are saying about us on <a href="#">Google</a>.</p>
-      <p>We are very proud of the service we provide and some of our customers have been with us for over 30 Years!</p>
+      <p>Read what our customers are saying about us on <a href="https://www.google.com">Google</a>.</p><br>
+      <p>We are very proud of the service we provide and some of our customers have been with us for over 30 Years!</p><br>
       <p>Click <a href="#">here</a> to find out more of what customers think.</p>
     </div>
 
@@ -591,13 +607,13 @@
   </div>
 
   <div class="footer-column" id="contact">
-    <h3>CONTACT US</h3>
+    <h3>CONTACT US</h3><br>
     <a href="#">6374424590</a>
-    <a href="#">akshathamoni3@gmail.com</a>
+    <a href="https://mail.google.com.">akshathamoni3@gmail.com</a>
     <a href="#">Privacy & Cookie Policy</a>
-    <a href="#">Policy Statements</a>
-  </div>
 
+  </div>
+  
   <div class="footer-column" id="form">
     <h3>SEND US A MESSAGE</h3>
     <form class="message-form">
